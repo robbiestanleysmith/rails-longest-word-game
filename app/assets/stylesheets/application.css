@@ -13,3 +13,22 @@
  *= require_tree .
  *= require_self
  */
+
+ .container {
+  width: 75%;
+  font-family: Courier, serif;
+  color: rgb(21, 148, 207);
+  font-size: 20px;
+}
+.card-letter {
+  background-color: rgb(21, 148, 207);
+  font-family: Courier, serif;
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+  width: 50px;
+  border: 1px solid black;
+}
+.container > .row {
+  height: 50px;
+}

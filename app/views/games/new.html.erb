@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row my-4">
+    <div class="col">
+      <h1>New game</h1>
+    </div>
+  </div>
+  <div class="row my-4">
+    <% @letters.each do |letter| %>
+      <div class="col card-letter mx-4 text-center align-items-center">
+        <%= letter %>
+      </div>
+    <% end %>
+  </div>
+  <form action="/score" class="form-inline mx-0 row align-items-end" data-turbo="false" method="POST">
+    <div class="col-11 m-0 p-0">
+      <label for="user_guess">Find the longest word!</label>
+      <input type="text" name="user_guess" class="form-control">
+    </div>
+    <div class="col-1 m-0 p-0 ">
+      <button type="submit" value="Play!" class="btn btn-info w-100 ">Play</button>
+    </div>
+    <%= hidden_field_tag :letters, @letters %>
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  </form>
+</div>
